@@ -3,9 +3,9 @@
 .menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   list-style: none;
-  max-width: 100%;
+  align-items: center;
 }
 
 .text {
@@ -14,4 +14,15 @@
 
 .ui.simple.dropdown .menu {
   transition: opacity .9s ease;
+}
+
+a {
+  color: black;
+}
+
+.content-wrapper {
+  background-image: url('../images/lightbulbs.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }

@@ -13,10 +13,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   list-style: none;
-  max-width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .text {
@@ -26,5 +29,16 @@
 .ui.simple.dropdown .menu {
   -webkit-transition: opacity .9s ease;
   transition: opacity .9s ease;
+}
+
+a {
+  color: black;
+}
+
+.content-wrapper {
+  background-image: url("../images/lightbulbs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
