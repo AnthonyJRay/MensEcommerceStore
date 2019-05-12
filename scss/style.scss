@@ -1,0 +1,17 @@
+@import '_reset.scss';
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  max-width: 100%;
+}
+
+.text {
+  text-decoration: none;
+}
+
+.ui.simple.dropdown .menu {
+  transition: opacity .9s ease;
+}
