@@ -14,11 +14,11 @@
 <div class="wrapper">
   <header>
   <nav class="navigation">
-    <div class="ui menu">
-      <a class="home-link">
+    <div class="ui menu fixed sticky">
+      <a class="home-link" href="#">
         Home
       </a>
-      <div class="ui simple pointing dropdown link fixed sticky">
+      <div class="ui simple pointing dropdown link">
         <span class="text">Apparel</span>
         <i class="dropdown icon"></i>
         <div class="menu">
@@ -75,6 +75,7 @@
             </div>
       <a class="cart-link">
         <i class="fas fa-shopping-cart"></i>
+        <span class="cart-contents">Your Cart is Empty</span>
       </a>
     </div>
     </div>
@@ -82,15 +83,37 @@
   </nav>
   </header>
 
+  <div class="shoppingCart">
+      <p class="cartHeader">Shopping Cart</p>
+      <hr>
+    </div>
+
   <main class="main-content">
     <!-- Main Content Area -->
-    <div class="content-wrapper">
-
-    </div>
-    <!-- Main Content End -->
+      <div class="content-wrapper">
+        <div class="content-area one">
+          <div id="slideShow">One
+            <!-- About SlideShadow -->
+          </div>
+          <div id="conTwo">
+            <h2>Urban Dev Co.</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet, nesciunt..</p>
+              <div class="content-box-bottom">Content Area</div>
+          </div>
+        </div>
+        </div>
+        
+        <div class="content-wrapper two">
+          <div class="content-area-two">
+            Content Area
+          </div>
+        </div>
+        <!-- Main Content End -->
   </main>
   <footer>
     <!-- Footer Area -->
+    Footer
+    <!-- Footer Area End -->
   </footer>
 </div>
 <script src="node_modules/semantic-ui/dist/semantic.min.js"></script>
