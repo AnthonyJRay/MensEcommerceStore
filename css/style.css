@@ -73,16 +73,6 @@ a {
   background-color: transparent;
 }
 
-.content-area-two {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  background-color: #fff;
-  width: 50%;
-  height: 500px;
-  margin: auto;
-}
-
 footer {
   height: 50px;
 }
@@ -218,5 +208,54 @@ footer {
 hr {
   width: 75%;
   margin: auto;
+}
+
+.grooming-box,
+.footwear-box,
+.accessories-box {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #fff;
+  width: 50%;
+  height: 500px;
+  margin: auto;
+}
+
+.grooming-left {
+  background-image: url("../images/grooming-2.jpg");
+  background-position-x: -100px;
+  -webkit-animation: groomingSlide 30s infinite;
+          animation: groomingSlide 30s infinite;
+}
+
+@-webkit-keyframes groomingSlide {
+  25% {
+    background-image: url("../images/grooming-7.jpg");
+  }
+  65% {
+    background-image: url("../images/image-10.jpg");
+    background-position-x: -100px;
+  }
+  85% {
+    background-image: url("../images/image-40.jpg");
+  }
+}
+
+@keyframes groomingSlide {
+  25% {
+    background-image: url("../images/grooming-7.jpg");
+  }
+  65% {
+    background-image: url("../images/image-10.jpg");
+    background-position-x: -100px;
+  }
+  85% {
+    background-image: url("../images/image-40.jpg");
+  }
 }
 /*# sourceMappingURL=style.css.map */

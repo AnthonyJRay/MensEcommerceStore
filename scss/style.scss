@@ -52,13 +52,6 @@ a {
   background-color: transparent;
 }
 
-.content-area-two {
-  align-self: center;
-  background-color: #fff;
-  width: 50%;
-  height: 500px;
-  margin: auto;
-}
 
 footer {
   height: 50px;
@@ -155,5 +148,37 @@ hr {
   margin: auto;
 }
 
+.grooming-box,
+.footwear-box,
+.accessories-box {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    align-self: center;
+    background-color: #fff;
+    width: 50%;
+    height: 500px;
+    margin: auto;
+}
+
+.grooming-left {
+  background-image: url('../images/grooming-2.jpg');
+  background-position-x: -100px;
+  animation: groomingSlide 30s infinite;
+}
+
+@keyframes groomingSlide {
+  25% {
+    // background-position-x: -150px;
+    background-image: url('../images/grooming-7.jpg');
+  }
+  65% {
+    background-image: url('../images/image-10.jpg');
+    background-position-x: -100px;
+  }
+  85% {
+    background-image: url('../images/image-40.jpg');
+  }
+}
 
 
