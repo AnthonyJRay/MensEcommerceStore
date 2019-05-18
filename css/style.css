@@ -80,8 +80,8 @@ footer {
 .content-area.one {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 100px 1fr 1fr;
+      grid-template-columns: 100px 1fr 1fr;
   text-align: center;
 }
 
@@ -146,7 +146,7 @@ footer {
 }
 
 #slideShow {
-  background: url("../images/image-00.jpg");
+  background: url("../images/Modal-1/image-00.jpg");
   opacity: .9;
   background-color: rgba(73, 73, 73, 0.2);
   max-width: 100%;
@@ -160,28 +160,28 @@ footer {
 @-webkit-keyframes slideShow {
   25% {
     background-position-x: -150px;
-    background-image: url("../images/image-30.jpg");
+    background-image: url("../images/Modal-1/image-30.jpg");
   }
   65% {
-    background-image: url("../images/image-10.jpg");
+    background-image: url("../images/Modal-1/image-10.jpg");
     background-position-x: -100px;
   }
   85% {
-    background-image: url("../images/image-40.jpg");
+    background-image: url("../images/Modal-1/image-40.jpg");
   }
 }
 
 @keyframes slideShow {
   25% {
     background-position-x: -150px;
-    background-image: url("../images/image-30.jpg");
+    background-image: url("../images/Modal-1/image-30.jpg");
   }
   65% {
-    background-image: url("../images/image-10.jpg");
+    background-image: url("../images/Modal-1/image-10.jpg");
     background-position-x: -100px;
   }
   85% {
-    background-image: url("../images/image-40.jpg");
+    background-image: url("../images/Modal-1/image-40.jpg");
   }
 }
 
@@ -216,8 +216,8 @@ hr {
   display: -ms-grid;
   display: grid;
   text-align: center;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 100px 1fr 1fr;
+      grid-template-columns: 100px 1fr 1fr;
   -ms-grid-row-align: center;
       align-self: center;
   background-color: #fff;
@@ -228,34 +228,57 @@ hr {
 
 .grooming-left {
   background-image: url("../images/grooming-2.jpg");
-  background-position-x: -100px;
+  background-position-x: -50px;
   -webkit-animation: groomingSlide 30s infinite;
           animation: groomingSlide 30s infinite;
+  border: 1px solid blue;
 }
 
 @-webkit-keyframes groomingSlide {
   25% {
-    background-image: url("../images/grooming-7.jpg");
+    background-image: url("../images/grooming-7.png");
   }
   65% {
-    background-image: url("../images/image-10.jpg");
-    background-position-x: -100px;
+    background-image: url("../images/modal-1/image-10.jpg");
   }
   85% {
-    background-image: url("../images/image-40.jpg");
+    background-image: url("../images/modal-1/image-40.jpg");
   }
 }
 
 @keyframes groomingSlide {
   25% {
-    background-image: url("../images/grooming-7.jpg");
+    background-image: url("../images/grooming-7.png");
   }
   65% {
-    background-image: url("../images/image-10.jpg");
-    background-position-x: -100px;
+    background-image: url("../images/modal-1/image-10.jpg");
   }
   85% {
-    background-image: url("../images/image-40.jpg");
+    background-image: url("../images/modal-1/image-40.jpg");
   }
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 2rem;
+  font-weight: 700px;
+  background-color: #fff;
+  position: relative;
+  right: 999px;
+}
+
+.box-title {
+  background-color: white;
 }
 /*# sourceMappingURL=style.css.map */
