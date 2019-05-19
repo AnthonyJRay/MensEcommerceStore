@@ -395,4 +395,29 @@ p {
     top: 0;
   }
 }
+
+#Layer_1 {
+  height: 50%;
+  stroke: transparent;
+}
+
+#U-1, #U-2, #R-1, #R-2, #B-1, #B-2, #A-1, #A-2, #N, #D-1, #D-2, #EV-1, #EV-2 {
+  stroke: red;
+  stroke-width: 100;
+  stroke-dasharray: 1000;
+  -webkit-animation: stroke 20s linear;
+          animation: stroke 20s linear;
+}
+
+@-webkit-keyframes stroke {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes stroke {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+}
 /*# sourceMappingURL=style.css.map */
