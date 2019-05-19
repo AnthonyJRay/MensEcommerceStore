@@ -125,16 +125,18 @@ footer {
 }
 
 .shoppingCart {
-  position: absolute;
+  display: none;
+  position: fixed;
   text-align: center;
   top: 50px;
   right: -999px;
-  height: 90%;
+  height: 90vh;
   width: 200px;
   background-color: #fff;
   border-radius:  5px;
   &.open {
     right: 10px;
+    display: block;
   }
 }
 
@@ -192,11 +194,86 @@ hr {
   font-weight: 700px;
   background-color: #fff;
   position: relative;
-  right: 999px;
+  // right: 999px;
 }
 
 .box-title {
   background-color: white;
+}
+
+body {
+  position: absolute;
+  scroll-snap-type: y mandatory;
+  scroll-snap-destination: 100% 0%;
+  scroll-snap-points-y: repeat(100vh);
+}
+
+.content-wrapper {
+  scroll-snap-align: start;
+  // scroll-snap-stop: normal;
+}
+
+.letter {
+  opacity: 0;
+}
+
+.store-banner {
+  display: flex;
+  flex-direction: column;
+  font-size: 5rem;
+  height: 75vh;
+  width: 75vw;
+  background-color: #f1f1f1;
+  margin: auto;
+  opacity: .9;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  margin: 0;
+}
+
+.divider {
+  height: 5px;
+  width: 30%;
+  opacity: 1;
+  background-color: rgb(134, 76, 76);
+  animation: slideDivider 2s linear;
+}
+
+@keyframes slideDivider {
+0% {
+  width: 0%;
+  opacity: 0;
+}
+}
+
+.brand {
+  // font-family: 'Courgette', cursive;
+  font-family: 'Rock Salt', cursive;
+  color: rgb(75, 70, 70);
+  position: relative;
+  animation: brandGrow 2s ease-in;
+}
+
+@keyframes brandGrow {
+  0% {
+    top: 65px;
+    opacity: 0;
+    font-size: 3rem;
+  }
+  50% {
+    opacity: 0;
+    font-size: 4rem;
+  }
+  75% {
+    opacity: .2;
+  }
+  100% {
+    font-size: 5rem;
+    top: 0;
+  }
 }
 
 

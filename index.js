@@ -10,51 +10,16 @@ cartButton.addEventListener('click', e => {
 }});
 
 
+$(".letter").css({
+  position: "relative",
+}).animate({
+  right: 999,
+}).animate({
+  right: 0,
+  opacity: .5,
+}, 1800, "swing").animate({
+  opacity: .9,
+},1000)
 
 
 
-
-jQuery(function($) {
-
-  var target = $(".title").each(
-  target.html(target.text().replace(/./g, "<span>$&</span>")));
-
-  setTimeout(runAnimation, 250);
-
-  function runAnimation() {
-    var index, spans;
-
-    index = 0;
-    spans = target.children();
-    doOne();
-
-    function doOne() {
-      var span = $(spans[index]);
-      if (!$.trim(span.text())) {
-        // Skip blanks
-        next();
-        return;
-      }
-
-      // Do this one
-      span.css({
-        position: "relative",
-      }).animate({
-        right: -999,
-      }, "slow", function() {
-        next();
-      });
-    }
-
-    function next() {
-      ++index;
-      if (index < spans.length) {
-        doOne();
-      }
-      else {
-        setTimeout(runAnimation, 500);
-      }
-    }
-  }
-
-});

@@ -186,11 +186,12 @@ footer {
 }
 
 .shoppingCart {
-  position: absolute;
+  display: none;
+  position: fixed;
   text-align: center;
   top: 50px;
   right: -999px;
-  height: 90%;
+  height: 90vh;
   width: 200px;
   background-color: #fff;
   border-radius: 5px;
@@ -198,6 +199,7 @@ footer {
 
 .shoppingCart.open {
   right: 10px;
+  display: block;
 }
 
 .cartHeader {
@@ -275,10 +277,122 @@ hr {
   font-weight: 700px;
   background-color: #fff;
   position: relative;
-  right: 999px;
 }
 
 .box-title {
   background-color: white;
+}
+
+body {
+  position: absolute;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  -ms-scroll-snap-destination: 100% 0%;
+      scroll-snap-destination: 100% 0%;
+  -ms-scroll-snap-points-y: repeat(100vh);
+      scroll-snap-points-y: repeat(100vh);
+}
+
+.content-wrapper {
+  scroll-snap-align: start;
+}
+
+.letter {
+  opacity: 0;
+}
+
+.store-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 5rem;
+  height: 75vh;
+  width: 75vw;
+  background-color: #f1f1f1;
+  margin: auto;
+  opacity: .9;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+p {
+  margin: 0;
+}
+
+.divider {
+  height: 5px;
+  width: 30%;
+  opacity: 1;
+  background-color: #864c4c;
+  -webkit-animation: slideDivider 2s linear;
+          animation: slideDivider 2s linear;
+}
+
+@-webkit-keyframes slideDivider {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+}
+
+@keyframes slideDivider {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+}
+
+.brand {
+  font-family: 'Rock Salt', cursive;
+  color: #4b4646;
+  position: relative;
+  -webkit-animation: brandGrow 2s ease-in;
+          animation: brandGrow 2s ease-in;
+}
+
+@-webkit-keyframes brandGrow {
+  0% {
+    top: 65px;
+    opacity: 0;
+    font-size: 3rem;
+  }
+  50% {
+    opacity: 0;
+    font-size: 4rem;
+  }
+  75% {
+    opacity: .2;
+  }
+  100% {
+    font-size: 5rem;
+    top: 0;
+  }
+}
+
+@keyframes brandGrow {
+  0% {
+    top: 65px;
+    opacity: 0;
+    font-size: 3rem;
+  }
+  50% {
+    opacity: 0;
+    font-size: 4rem;
+  }
+  75% {
+    opacity: .2;
+  }
+  100% {
+    font-size: 5rem;
+    top: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
