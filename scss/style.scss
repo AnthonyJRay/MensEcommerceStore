@@ -2,9 +2,8 @@
 
 html,
 body {
-  height: 100%;
   scroll-snap-type: y mandatory;
-  overflow: scroll;
+  overflow-y: scroll;
   scroll-behavior: smooth;
 }
 .menu {
@@ -37,7 +36,6 @@ a {
   background-position: center;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
   scroll-snap-align: center;
   scroll-snap-stop: always;
   &.two {
@@ -200,15 +198,11 @@ hr {
   font-weight: 700px;
   background-color: #fff;
   position: relative;
-  // right: 999px;
+  right: 0;
 }
 
 .box-title {
   background-color: white;
-}
-
-.letter {
-  opacity: 0;
 }
 
 .store-banner {
@@ -244,7 +238,6 @@ p {
 }
 
 .brand {
-  // font-family: 'Courgette', cursive;
   font-family: 'Rock Salt', cursive;
   color: rgb(75, 70, 70);
   position: relative;
@@ -377,21 +370,6 @@ p {
   stroke: #4b4646;
 }
 
-
-.hidden {
-  opacity: 0;
-}
-
 .letter {
-  position: relative;
-  right: 0;
-  opacity: .9;
-  animation: letter 1s ease-out;
-}
-
-@keyframes letter {
-  0% {
-    right: 999px;
-    opacity: 0;
-  }
+  transform: translateX(10px);
 }

@@ -7,10 +7,9 @@
 
 html,
 body {
-  height: 100%;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
-  overflow: scroll;
+  overflow-y: scroll;
   scroll-behavior: smooth;
 }
 
@@ -56,7 +55,6 @@ a {
   background-position: center;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
   scroll-snap-align: center;
   scroll-snap-stop: always;
 }
@@ -284,14 +282,11 @@ hr {
   font-weight: 700px;
   background-color: #fff;
   position: relative;
+  right: 0;
 }
 
 .box-title {
   background-color: white;
-}
-
-.letter {
-  opacity: 0;
 }
 
 .store-banner {
@@ -526,29 +521,8 @@ p {
   stroke: #4b4646;
 }
 
-.hidden {
-  opacity: 0;
-}
-
 .letter {
-  position: relative;
-  right: 0;
-  opacity: .9;
-  -webkit-animation: letter 1s ease-out;
-          animation: letter 1s ease-out;
-}
-
-@-webkit-keyframes letter {
-  0% {
-    right: 999px;
-    opacity: 0;
-  }
-}
-
-@keyframes letter {
-  0% {
-    right: 999px;
-    opacity: 0;
-  }
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
 }
 /*# sourceMappingURL=style.css.map */
