@@ -9,7 +9,7 @@ cartButton.addEventListener('click', e => {
   shoppingCart.classList.add('open');
 }});
 
-const contentArea = document.querySelector('.content-area');
+const contentArea = document.querySelector('#apparel');
 
 function getBoundingClientRect() {
   const rect = contentArea.getBoundingClientRect();
@@ -25,6 +25,13 @@ function getBoundingClientRect() {
   };
 }
 
+addClass = () => {
+  const btn = document.querySelector('.button');
+  btn.
+  console.log(btn);
+}
+
+addClass()
 // const contentTop = getBoundingClientRect(contentArea).top;
 // const pageTop = document.body.scrollTop;
 // const boxDiff = 49.5;
@@ -42,16 +49,14 @@ function getBoundingClientRect() {
 // scrollView(contentTop, pageTop);
 const contentTop = getBoundingClientRect(contentArea).top;
 const pageTop = document.body.scrollTop;
-const letter = document.querySelectorAll('.content-wrapper');
+const letter = document.querySelector('#apparel');
 
 $(document.body).scroll( function () {
   if (pageTop + contentTop - 599 === 49.5) {
       console.log('Box is centered');
-      letter.classList.replace (
-        'content-wrapper',
-        'letter'
-      );
-      console.log(letter)
+      letter.classList.add('letter');
+    } else {
+      letter.classList.remove('letter');
     }
 })
 
